@@ -1,0 +1,12 @@
+div#captcha {
+    border:2px solid;
+    width: 320px;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    color: #fff;
+    border-color: #000;
+    padding: 0px;
+    margin: 0px;
+    background-color: #404040;
+}
