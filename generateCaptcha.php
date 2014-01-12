@@ -142,7 +142,6 @@
 
 		    $imgColor = imagecolorallocate($img,intval($color[0]*255.0),intval($color[1]*255.0),intval($color[2]*255.0));
 
-			//$values = array( $cx+$ul[0], $cy+$ul[1], $cx+$bl[0], $cy+$bl[1], $cx+$br[0], $cy+$br[1], $cx+$ur[0], $cy+$ur[1] );
 			imagefilledpolygon ($img, $values, 4, $imgColor);
 		}
 

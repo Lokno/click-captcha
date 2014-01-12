@@ -6,7 +6,7 @@ The CAPTCHA generates a 320x200 PNG image using PHP. It is a grid of 10x16 cells
 
 ## Usage ##
 
-- Run index.php on a PHP-enabled web server
+- Run example file index.php on a PHP-enabled web server
 - Click the circle in the image
 - If "You're Human" is displayed, onCaptchaSuccess() was called in index.php
 - Otherwise, onCaptchaFailed() is called, and the image is reloaded
