@@ -20,4 +20,4 @@ For a running example, visit: http://www.rabbitfury.com/captcha/
 
 ## Updates ##
 
-- 1/12/2014 : Removed reliance on window.event. Implementation not works in Firefox
+- 1/12/2014 : Removed reliance on window.event. Implementation now works in Firefox
