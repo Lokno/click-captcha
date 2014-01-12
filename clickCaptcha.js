@@ -1,4 +1,4 @@
-// Click Captcha 0.1.0
+// Click CAPTCHA 0.1.0
 // Created by Jonathan Decker
 
 URLGenerate = "generateCaptcha.php";
