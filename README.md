@@ -14,4 +14,4 @@ The CAPTCHA generates a 320x200 PNG image using PHP. It is a grid of 10x16 cells
 
 Example generated image. The target circle is on the far right, middle:
 
-![alt tag](https://raw.github.com/lokno/click-captcha/example_image.png)
+![alt tag](https://raw.github.com/lokno/click-captcha/master/example_image.png)
