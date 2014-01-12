@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <?php include('clickCaptcha.php'); ?>
 		<script type="text/javascript">
-			 // Click CAPTCHA 0.1.0
+			 // Click CAPTCHA 0.1.1
 			 // Created by Jonathan Decker
 
 			 var start = 0;

@@ -18,3 +18,6 @@ For a running example, visit: http://www.rabbitfury.com/captcha/
 - Otherwise, onCaptchaFailed() is called, and the image is reloaded
 - Modify these methods to change the behavior as desired
 
+## Updates ##
+
+- 1/12/2014 : Removed reliance on window.event. Implementation not works in Firefox

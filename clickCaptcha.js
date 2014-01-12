@@ -1,13 +1,9 @@
-// Click CAPTCHA 0.1.0
+// Click CAPTCHA 0.1.1
 // Created by Jonathan Decker
 
 URLGenerate = "generateCaptcha.php";
 URLSubmit = "compare.php";
-divStr = 'Click the circle<img src="data:image/png;base64,';
-img_left = 0;
-img_top = 0;
-count_misses = 0;
-count_threshold = 0;
+divStr = 'Click the circle<input type="image" id="captcha_image" src="data:image/png;base64,';
 
 function createRequestObject() {
   var ro;
@@ -44,12 +40,11 @@ var http = createRequestObject();
 function initCaptcha()
 {
 	divele = document.getElementById("captcha");
-    img_left = divele.offsetLeft;
-    img_top = divele.offsetTop;	
-
-    divele.onclick = submitForm;
 
     divele.innerHTML = divStr + imgData + '"/>';
+    
+    imgele = document.getElementById("captcha_image");
+    imgele.onclick = submitForm;
 }
 
 function handleSubmitResponse()
@@ -62,21 +57,19 @@ function handleSubmitResponse()
 		}
 		else
 		{
-			count_misses++;
-
-			if( count_misses > count_threshold )
-			{
-				document.getElementById("captcha").onclick = null;
-				onCaptchaFailed();
-			}
+			onCaptchaFailed();
 		}
 	}
 }
 
-function submitForm()
+function submitForm(e)
 {
-	var pos_x = event.offsetX ? (event.offsetX) : event.pageX-img_left;
-	var pos_y = event.offsetY ? (event.offsetY) : event.pageY-img_top;
+	imgele = document.getElementById("captcha_image");
+	img_left = imgele.offsetLeft;
+    img_top = imgele.offsetTop;	
+
+	var pos_x = e.offsetX ? (e.offsetX) : e.pageX-img_left;
+	var pos_y = e.offsetY ? (e.offsetY) : e.pageY-img_top;
 
 	http.open('POST', URLSubmit, true);
 
@@ -110,9 +103,6 @@ function handleGenerateResponse()
 
 function requestNewCaptcha()
 {
-	var pos_x = event.offsetX ? (event.offsetX) : event.pageX-img_left;
-	var pos_y = event.offsetY ? (event.offsetY) : event.pageY-img_top;
-
 	http.open('POST', URLGenerate, true);
 
 	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

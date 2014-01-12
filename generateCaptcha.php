@@ -1,5 +1,5 @@
 <?php
-	// Click Captcha 0.1.0
+	// Click Captcha 0.1.1
 	// Created by Jonathan Decker
 
 	$rows = 10;
